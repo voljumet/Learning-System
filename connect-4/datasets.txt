@@ -1,0 +1,19 @@
+data = [{'': False},{''}]
+
+
+b,b,b,b,b,b,
+b,b,b,b,b,b,
+x,o,b,b,b,b,
+x,o,x,o,x,o,
+b,b,b,b,b,b,
+b,b,b,b,b,b,
+b,b,b,b,b,b,win
+
+b = '00': True, '01': False, '10: False, '11': False
+
+check the mnist data structure
+
+b = 00
+x = 01
+o = 10
+F = 11
