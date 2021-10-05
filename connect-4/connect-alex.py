@@ -55,18 +55,28 @@ X_test = X_test.reshape((X_test.shape[0], 7*6*3))
 # Y_train = Y_train.reshape((Y_train.shape[0], 1))
 # Y_test = Y_test.reshape((Y_test.shape[0], 1))
 
-tm = MultiClassTsetlinMachine(1000, 40, 10.0)
 
-print("\nAccuracy over 250 epochs:\n")
-for i in range(250):
-    start_training = time()
-    tm.fit(X_train, Y_train, epochs=1, incremental=True)
-    stop_training = time()
 
-    start_testing = time()
-    result = 100*(tm.predict(X_test) == Y_test).mean()
-    stop_testing = time()
+def kjor(p,j,k,rangez):
+    tm = MultiClassTsetlinMachine(p, j, k)
+    print(f"\nT: {j}, s: {k}, #c: {p}")
+    # print(f"Accuracy over {rangez} epochs:")
+    results = []
+    for i in range(rangez):
+        # start_training = time()
+        tm.fit(X_train, Y_train, epochs=1, incremental=True)
+        # stop_training = time()
 
-    print("#%d Accuracy: %.2f%% Training: %.2fs Testing: %.2fs" % (i+1, result, stop_training-start_training, stop_testing-start_testing))
+        # start_testing = time()
+        results.append(100*(tm.predict(X_test) == Y_test).mean())
+        # stop_testing = time()
+    results.sort(reverse=True)
+    print(f"Best Accuracy over {rangez} epochs: {results[0]}")
+                                                                       # , stop_training-start_training, stop_testing-start_testing))
 
 # np.random.shuffle(training_dataset)
+for i in range(100,3000,100):
+    print("yes")
+    for j in range(10, 200, 5):
+        for k in range(3, 100, 3):
+            kjor(i, j, k, 6)
