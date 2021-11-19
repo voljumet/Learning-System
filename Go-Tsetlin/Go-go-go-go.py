@@ -1,52 +1,49 @@
 import string
-from datetime import time
-
+from time import time
 import numpy as np
+
+from sklearn.model_selection import train_test_split
 
 from pyTsetlinMachine.tm import MultiClassConvolutionalTsetlinMachine2D
 from process_go_ds import create_TM_representations
 
 
 game_size = 9  # determines number of columns and rows in the game, this must match with the dataset we are loading
-sgf_dir = 'go9'  # here you speciy your Go dataset sgf files directory
-X, Y = create_TM_representations(sgf_dir, game_size)  # where X is all samples represented in bits, Y is all the labels
+# sgf_dir = '../go9-large'  # here you speciy your Go dataset sgf files directory
+sgf_dir = '/Users/alex/Desktop/go9_all'  # here you speciy your Go dataset sgf files directory
 
+''' 
+Use "win", "black", or "white" to pick prediction model.
+'''
+X_linear, Y_temp = create_TM_representations(sgf_dir, game_size, "black")  # where X is all samples represented in bits, Y is all the labels
 
-# train_data = np.loadtxt("2DNoisyXORTrainingData.txt")
-X_st = X[:, :].reshape(X.shape[0], 18, 9)
-Y_st = Y
+# reshape from linear to matrix representation
+X_temp = X_linear[:, :].reshape(X_linear.shape[0], 9, 18)
 
-X_train = X_st[:int(X_st.shape[0] * 0.8)]
-Y_train = Y_st[:int(Y_st.shape[0] * 0.8)]
+# split into test / train and shuffle
+X_train, X_test, Y_train, Y_test = train_test_split(X_temp, Y_temp, test_size=0.33, random_state=42, shuffle=True)
 
-X_test = X_st[int(X_st.shape[0] * 0.8):]
-Y_test = Y_st[int(Y_st.shape[0] * 0.8):]
+N_clauses = 200
+Threshold = 200
+Forget_rate = 50
+ctm = MultiClassConvolutionalTsetlinMachine2D(N_clauses, Threshold, Forget_rate, (9, 18), boost_true_positive_feedback=0)
 
-# test_data = np.loadtxt("2DNoisyXORTestData.txt")
-# X_test = test_data[:, 0:-1].reshape(test_data.shape[0], 4, 4)
-# Y_test = test_data[:, -1]
+f = open("log.txt", "a")
+f.write(f"Number_of_clauses = {N_clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}" + "\n")
+f.close()
 
-ctm = MultiClassConvolutionalTsetlinMachine2D(40, 60, 3.9, (2, 2), boost_true_positive_feedback=0)
-
-# ctm.fit(X_train, Y_train, epochs=5000)
 
 results = np.zeros(0)
+print("Training...")
+epochs = 100
 for i in range(100):
 	start = time()
-	ctm.fit(X_train, Y_train, epochs=5000)
+	ctm.fit(X_train, Y_train, epochs=epochs)
 	stop = time()
 
 	results = np.append(results, 100*(ctm.predict(X_test) == Y_test).mean())
-	print("#%d Mean Accuracy (%%): %.2f; Std.dev.: %.2f; Training Time: %.1f ms/epoch" % (i+1, np.mean(results), np.std(results), (stop-start)/5.0))
+	print("#%d Mean Accuracy (%%): %.2f; Std.dev.: %.2f; Training Time: %.1f ms/epoch" % (i+1, np.mean(results), np.std(results), (stop-start)/epochs))
 
-#
-# print("Accuracy:", 100*(ctm.predict(X_test) == Y_test).mean())
-#
-# Xi = np.array([[[0, 1, 1, 0],
-# 		[1, 1, 0, 1],
-# 		[1, 0, 1, 1],
-# 		[0, 0, 0, 1]]])
-#
-# print("\nInput Image:\n")
-# print(Xi)
-# print("\nPrediction: %d" % (ctm.predict(Xi)))
+	f = open("log.txt", "a")
+	f.write("#%d Mean Accuracy (%%): %.2f; Std.dev.: %.2f; Training Time: %.1f ms/epoch" % (i + 1, np.mean(results), np.std(results), (stop - start)) + "\n")
+	f.close()
