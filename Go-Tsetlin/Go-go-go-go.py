@@ -1,3 +1,4 @@
+import pickle
 import string
 from time import time
 import numpy as np
@@ -12,14 +13,41 @@ game_size = 9  # determines number of columns and rows in the game, this must ma
 # sgf_dir = '../go9-large'  # here you speciy your Go dataset sgf files directory
 sgf_dir = 'go9-large'  # here you speciy your Go dataset sgf files directory
 
+def store_as_data(data, filename):
+	fw = open(filename+'.data', 'wb')
+	pickle.dump(data, fw)
+	fw.close()
+
+def load_data(filename):
+	inputFile = filename+'.data'
+	fd = open(inputFile, 'rb')
+	return pickle.load(fd)
+
+
 ''' 
 Use "win", "black", or "white" to pick prediction model.
 '''
 type_predict = "black"
-X_linear, Y_temp = create_TM_representations(sgf_dir, game_size, type_predict)  # where X is all samples represented in bits, Y is all the labels
+newData = True
 
-# reshape from linear to matrix representation
-X_temp = X_linear[:, :].reshape(X_linear.shape[0], 9, 18)
+if newData:
+	print("Dataset is being loaded ... \n")
+	X_linear, Y_temp = create_TM_representations(sgf_dir, game_size, type_predict)
+	print("Load complete ... \n")
+
+	print("Reshaping from linear to matrix ... \n")
+	X_temp = X_linear[:, :].reshape(X_linear.shape[0], 9, 18)
+	print("Reshap complete ... \n")
+
+	print("Saving data as files ... \n")
+	store_as_data(X_temp, "X_temp_"+type_predict)
+	store_as_data(Y_temp, "Y_temp_"+type_predict)
+else:
+	print("Skipping data loading ... \n")
+
+
+X_temp = load_data("X_temp_"+type_predict)
+Y_temp = load_data("Y_temp_"+type_predict)
 
 # split into test / train and shuffle
 X_train, X_test, Y_train, Y_test = train_test_split(X_temp, Y_temp, test_size=0.33, random_state=42, shuffle=True)
