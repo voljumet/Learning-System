@@ -9,14 +9,11 @@ from PyTsetlinMachineCUDA.tm import MultiClassConvolutionalTsetlinMachine2D
 from process_go_ds import create_TM_representations
 
 
-game_size = 9  # determines number of columns and rows in the game, this must match with the dataset we are loading
-# sgf_dir = '../go9-large'  # here you speciy your Go dataset sgf files directory
-sgf_dir = 'go9-large'  # here you speciy your Go dataset sgf files directory
-
 def store_as_data(data, filename):
 	fw = open(filename+'.data', 'wb')
 	pickle.dump(data, fw)
 	fw.close()
+
 
 def load_data(filename):
 	inputFile = filename+'.data'
@@ -24,11 +21,17 @@ def load_data(filename):
 	return pickle.load(fd)
 
 
-''' 
-Use "win", "black", or "white" to pick prediction model.
-'''
+''' ----------------- SETTINGS ----------------------------------- '''
+game_size = 9
+sgf_dir = 'go9-large'
+
+#Use "win", "black", or "white" to pick prediction model.
 type_predict = "black"
+
+# True = Load data from folders and save as data-file.
+# False = Load data from data-file.
 newData = True
+''' ---------------------------------------------------------------------------- '''
 
 if newData:
 	print("Dataset is being loaded ... \n")
@@ -43,7 +46,7 @@ if newData:
 	store_as_data(X_temp, "X_temp_"+type_predict+"_"+sgf_dir+"_"+str(game_size))
 	store_as_data(Y_temp, "Y_temp_"+type_predict+"_"+sgf_dir+"_"+str(game_size))
 else:
-	print("Skipping data loading ... \n")
+	print("Using data from file ... \n")
 
 
 X_temp = load_data("X_temp_"+type_predict+"_"+sgf_dir+"_"+str(game_size))
