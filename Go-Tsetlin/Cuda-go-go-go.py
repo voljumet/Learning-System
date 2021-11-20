@@ -5,7 +5,7 @@ import numpy as np
 
 from sklearn.model_selection import train_test_split
 
-from pyTsetlinMachine.tm import MultiClassConvolutionalTsetlinMachine2D
+from PyTsetlinMachineCUDA.tm import MultiClassConvolutionalTsetlinMachine2D
 from process_go_ds import create_TM_representations
 
 
@@ -55,10 +55,10 @@ X_train, X_test, Y_train, Y_test = train_test_split(X_temp, Y_temp, test_size=0.
 clauses = 200
 Threshold = 200
 Forget_rate = 50
-ctm = MultiClassConvolutionalTsetlinMachine2D(number_of_clauses=clauses, T=Threshold, s=Forget_rate, patch_dim=(9, 18), boost_true_positive_feedback=0)
+ctm = MultiClassConvolutionalTsetlinMachine2D(number_of_clauses=clauses, T=Threshold, s=Forget_rate, patch_dim=(9, 18), max_weigth=16)
 
 f = open("log.txt", "a")
-f.write(f"Type of predicting: {type_predict}, \n"+f"Number_of_clauses = {N_clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}" + "\n\n")
+f.write(f"Type of predicting: {type_predict}, \n"+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}" + "\n\n")
 f.close()
 
 
