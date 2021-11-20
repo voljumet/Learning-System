@@ -42,11 +42,11 @@ def convert_game_to_bits(stone_positions, game_size):
     return bits  # all bits representations for both players are concatenated to create the training set X
 
 
-def convert_game_to_bits_2(stone_positions, game_size, function_input):
+def convert_game_to_bits_2(x_temp, game_size, function_input):
 
     # bits = np.zeros(game_size**2 *2)  # because 9 x 9 is 9**2, and we double that since we will represent each stone or empty intersection with 2 bits
     game_size_alphabets = alphabet[:game_size]  # if game size is 9, it has 9 elements
-    
+    remove_last = ''
     if function_input == "black":
         remove_last = "W"
     elif function_input == "white":
@@ -63,13 +63,7 @@ def convert_game_to_bits_2(stone_positions, game_size, function_input):
         for x in game_size_alphabets:
             go_flatten_board_small.append(y + x)
 
-    x_temp, x_array, y_array = [], [], []
-    ''' append moves from game to an array '''
-    for p in stone_positions.split(';'):
-        if p != '':
-            ids = p[2:4].strip(']')
-            if re.match('[a-zA-Z]+', ids):
-                x_temp.append(p)
+    x_array, y_array = [], []
 
     if x_temp[:-1][0] == remove_last:
         x_temp.pop()
@@ -136,11 +130,18 @@ def create_TM_representations(dataset_dir, game_size, function_input):
                     X.append(stone_bits_representation)
                     Y.append(label)
                 else:
-                    stone_bits_representation, label = convert_game_to_bits_2(sample[3], game_size, function_input)
-                    for i, each in enumerate(stone_bits_representation):
-                        X.append(each)
-                        Y.append(label[i])
+                    x_temp = []
+                    for p in sample[3].split(';'):
+                        if p != '':
+                            ids = p[2:4].strip(']')
+                            if re.match('[a-zA-Z]+', ids):
+                                x_temp.append(p)
 
+                    if len(x_temp) > 2:
+                        stone_bits_representation, label = convert_game_to_bits_2(x_temp, game_size, function_input)
+                        for i, each in enumerate(stone_bits_representation):
+                            X.append(each)
+                            Y.append(label[i])
 
 
     print("Games with win: ", win)
@@ -152,8 +153,3 @@ def create_TM_representations(dataset_dir, game_size, function_input):
 
 alphabet = list(string.ascii_lowercase)
 
-# game_size = 9  # determines number of columns and rows in the game, this must match with the dataset we are loading
-# sgf_dir = 'go9'  # here you speciy your Go dataset sgf files directory
-# X, Y = create_TM_representations(sgf_dir, game_size, 1)  # where X is all samples represented in bits, Y is all the labels
-
-# print(X)

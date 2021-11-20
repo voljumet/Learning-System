@@ -10,12 +10,13 @@ from process_go_ds import create_TM_representations
 
 game_size = 9  # determines number of columns and rows in the game, this must match with the dataset we are loading
 # sgf_dir = '../go9-large'  # here you speciy your Go dataset sgf files directory
-sgf_dir = '/Users/alex/Desktop/go9_all'  # here you speciy your Go dataset sgf files directory
+sgf_dir = 'go9-large'  # here you speciy your Go dataset sgf files directory
 
 ''' 
 Use "win", "black", or "white" to pick prediction model.
 '''
-X_linear, Y_temp = create_TM_representations(sgf_dir, game_size, "black")  # where X is all samples represented in bits, Y is all the labels
+type_predict = "black"
+X_linear, Y_temp = create_TM_representations(sgf_dir, game_size, type_predict)  # where X is all samples represented in bits, Y is all the labels
 
 # reshape from linear to matrix representation
 X_temp = X_linear[:, :].reshape(X_linear.shape[0], 9, 18)
@@ -29,7 +30,7 @@ Forget_rate = 50
 ctm = MultiClassConvolutionalTsetlinMachine2D(N_clauses, Threshold, Forget_rate, (9, 18), boost_true_positive_feedback=0)
 
 f = open("log.txt", "a")
-f.write(f"Number_of_clauses = {N_clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}" + "\n")
+f.write(f"Type of predicting: {type_predict}, \n"+f"Number_of_clauses = {N_clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}" + "\n\n")
 f.close()
 
 
