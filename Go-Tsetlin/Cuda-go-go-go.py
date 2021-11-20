@@ -55,7 +55,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X_temp, Y_temp, test_size=0.
 clauses = 200
 Threshold = 200
 Forget_rate = 50
-ctm = MultiClassConvolutionalTsetlinMachine2D(number_of_clauses=clauses, T=Threshold, s=Forget_rate, patch_dim=(9, 18), max_weigth=16)
+ctm = MultiClassConvolutionalTsetlinMachine2D(number_of_clauses=clauses, T=Threshold, s=Forget_rate, patch_dim=(9, 18), max_weight=16)
 
 f = open("log.txt", "a")
 f.write(f"Type of predicting: {type_predict}, \n"+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}" + "\n\n")
