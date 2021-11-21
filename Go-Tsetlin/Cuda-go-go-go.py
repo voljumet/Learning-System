@@ -84,10 +84,10 @@ epochs = 100
 ''' ------------------------------------ '''
 ctm = MultiClassConvolutionalTsetlinMachine2D(number_of_clauses=clauses, T=Threshold, s=Forget_rate, patch_dim=(9, 18), max_weight=16)
 
-print(f"\nPredict: {type_predict}, "+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}, "+ f"Started = {timer()}"+"\n")
+print(f"\nPredict: {type_predict}, "+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}, "+ f"Epocs = {epochs}" + f"Started = {timer()}"+"\n")
 
 f = open("log.txt", "a")
-f.write(f"Predict: {type_predict}, "+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}"+ f"Epocs = {epochs}" + "\n")
+f.write(f"Predict: {type_predict}, "+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}"+ f"Epocs = {epochs}" + f"Started = {timer()}"+ "\n")
 f.close()
 
 

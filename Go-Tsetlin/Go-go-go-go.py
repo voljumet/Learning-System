@@ -81,17 +81,19 @@ Y_temp = load_data("Y_temp_"+type_predict+"_"+sgf_dir+"_"+str(game_size)+"_moves
 X_train, X_test, Y_train, Y_test = train_test_split(X_temp, Y_temp, test_size=0.33, random_state=42, shuffle=True)
 
 ''' ------------- SETTINGS ------------- '''
-clauses = 100
+clauses = 1000
 Threshold = 100
 Forget_rate = 5
 epochs = 250
 ''' ------------------------------------ '''
 ctm = MultiClassConvolutionalTsetlinMachine2D(number_of_clauses=clauses, T=Threshold, s=Forget_rate, patch_dim=(9, 18), boost_true_positive_feedback=0)
 
-print(f"\nPredict: {type_predict}, "+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}, "+ f"Started = {timer()}"+"\n")
+print(f"\nPredict: {type_predict}, "+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}, "
+      + f"Epocs = {epochs}" + f"Started = {timer()}"+"\n")
 
 f = open("log.txt", "a")
-f.write(f"\nPredict: {type_predict}, "+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}, "+ f"Started = {timer()}"+"\n")
+f.write(f"\nPredict: {type_predict}, "+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}, "
+        + f"Epocs = {epochs}" + f"Started = {timer()}"+"\n")
 f.close()
 
 
