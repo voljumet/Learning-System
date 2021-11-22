@@ -73,6 +73,7 @@ def convert_game_to_bits_2(x_temp, game_size, function_input, moves_to_predict):
     else:
         x_array, y_array = predict_second_move(x_temp, go_flatten_board, go_flatten_board_small, game_size, function_input, moves_to_predict)
 
+
     return x_array, y_array
 
 def predict_second_move(x_temp, go_flatten_board, go_flatten_board_small, game_size, function_input, moves_to_predict):
@@ -139,16 +140,19 @@ def create_TM_representations(dataset_dir, game_size, function_input, moves_to_p
                 sample = sgf_file.readlines()
                 if re.findall('(RE\[W)', sample[0]) != []:  # we use regular expression to check if results in favor of white. Class 0  for white winning
                     label = 0
+                    label2 = "white"
                     loss += 1
                 elif re.findall('(RE\[B)', sample[0]) != []:  # we use regular expression to check if results in favor of black. class 1 for white losing
                     label = 1
+                    label2 = "black"
                     win += 1
                 else:
                     label = 2  # we use regular expression to check if no results reported so it is a draw
+                    label2 = "draw"
                     draw += 1
 
                 # we get the move information in terms of row id and column id, we then convert those to bits representations using a helper function
-                if function_input == "win":
+                if function_input == "win" and label2 == "black":
                     stone_bits_representation = convert_game_to_bits(sample[3], game_size)
                     X.append(stone_bits_representation)
                     Y.append(label)
@@ -168,10 +172,12 @@ def create_TM_representations(dataset_dir, game_size, function_input, moves_to_p
                                 X.append(each)
                                 Y.append(label[i])
                         else:
-                            if moves_to_predict < len(x_temp) != 2:  # stop the recursion if there are no more moves
-                                stone_bits_representation, label = convert_game_to_bits_2(x_temp, game_size, function_input, moves_to_predict)
-                                X.append(stone_bits_representation)
-                                Y.append(label)
+                            if label2 == function_input:
+                                if moves_to_predict < len(x_temp) != 2:
+                                    stone_bits_representation, label = convert_game_to_bits_2(x_temp, game_size, function_input, moves_to_predict)
+                                    X.append(stone_bits_representation)
+                                    Y.append(label)
+
 
     print("Games with win: ", win)
     print("Games with loss: ", loss)
