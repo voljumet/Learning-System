@@ -6,23 +6,30 @@ from datetime import datetime
 
 from sklearn.model_selection import train_test_split
 
-from pyTsetlinMachine.tm import MultiClassConvolutionalTsetlinMachine2D
-
 from process_go_ds import create_TM_representations
+
+while True:
+	cuda = input("CUDA? (T / F): ")
+	if cuda == "T":
+		from PyTsetlinMachineCUDA.tm import MultiClassConvolutionalTsetlinMachine2D
+		break
+	elif cuda == "F":
+		from pyTsetlinMachine.tm import MultiClassConvolutionalTsetlinMachine2D
+		break
 
 
 def timer():
-    return datetime.now().strftime('%H:%M:%S, %d-%m')
+	return datetime.now().strftime('%H:%M:%S, %d-%m')
 
 
 def store_as_data(data, filename):
-	fw = open(filename+'.data', 'wb')
+	fw = open(filename + '.data', 'wb')
 	pickle.dump(data, fw)
 	fw.close()
 
 
 def load_data(filename):
-	input_file = filename+'.data'
+	input_file = filename + '.data'
 	fd = open(input_file, 'rb')
 	return pickle.load(fd)
 
@@ -31,11 +38,6 @@ def load_data(filename):
 game_size = 9
 sgf_dir = 'go9'
 
-# Use "win", "black", or "white" to pick prediction model.
-
-
-# True = Load data from folders and save as data-file.
-# False = Load data from data-file.
 
 while True:
 	moves_to_predict = int(input("How many moves to predict? (B=odd, W=even):"))
@@ -57,7 +59,6 @@ while True:
 		break
 ''' -------------------------------------------------------------- '''
 
-
 if newData:
 	print("Dataset is being loaded from folder... \n")
 	X_linear, Y_temp = create_TM_representations(sgf_dir, game_size, type_predict, moves_to_predict)
@@ -68,14 +69,15 @@ if newData:
 	print("Reshape complete ... \n")
 
 	print("Saving as data-files ... \n")
-	store_as_data(X_temp, "X_temp_"+type_predict+"_"+sgf_dir+"_"+str(game_size)+"_moves"+str(moves_to_predict))
-	store_as_data(Y_temp, "Y_temp_"+type_predict+"_"+sgf_dir+"_"+str(game_size)+"_moves"+str(moves_to_predict))
+	store_as_data(X_temp,
+	              "X_temp_" + type_predict + "_" + sgf_dir + "_" + str(game_size) + "_moves" + str(moves_to_predict))
+	store_as_data(Y_temp,
+	              "Y_temp_" + type_predict + "_" + sgf_dir + "_" + str(game_size) + "_moves" + str(moves_to_predict))
 else:
 	print("Skipping loading from folder, using data-files ... \n")
 
-
-X_temp = load_data("X_temp_"+type_predict+"_"+sgf_dir+"_"+str(game_size)+"_moves"+str(moves_to_predict))
-Y_temp = load_data("Y_temp_"+type_predict+"_"+sgf_dir+"_"+str(game_size)+"_moves"+str(moves_to_predict))
+X_temp = load_data("X_temp_" + type_predict + "_" + sgf_dir + "_" + str(game_size) + "_moves" + str(moves_to_predict))
+Y_temp = load_data("Y_temp_" + type_predict + "_" + sgf_dir + "_" + str(game_size) + "_moves" + str(moves_to_predict))
 
 # split into test / train and shuffle
 X_train, X_test, Y_train, Y_test = train_test_split(X_temp, Y_temp, test_size=0.2, random_state=42, shuffle=True)
@@ -86,16 +88,20 @@ Threshold = 100
 Forget_rate = 5
 epochs = 250
 ''' ------------------------------------ '''
-ctm = MultiClassConvolutionalTsetlinMachine2D(number_of_clauses=clauses, T=Threshold, s=Forget_rate, patch_dim=(9, 18), boost_true_positive_feedback=0)
+if cuda == "T":
+	ctm = MultiClassConvolutionalTsetlinMachine2D(number_of_clauses=clauses, T=Threshold, s=Forget_rate, patch_dim=(9, 18), max_weight=50)
+elif cuda == "F":
+	ctm = MultiClassConvolutionalTsetlinMachine2D(number_of_clauses=clauses, T=Threshold, s=Forget_rate, patch_dim=(9, 18), boost_true_positive_feedback=0)
 
-print(f"\nPredict: {type_predict}, "+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}, "
-      + f"Epocs = {epochs}" + f"Started = {timer()}"+"\n")
+print(
+	f"\nPredict: {type_predict}, " + f"Number_of_clauses = {clauses}, " + f"T = {Threshold}, " + f"S = {Forget_rate}, "
+	+ f"Epocs = {epochs}" + f"Started = {timer()}" + "\n")
 
 f = open("log.txt", "a")
-f.write(f"\nPredict: {type_predict}, "+f"Number_of_clauses = {clauses}, "+ f"T = {Threshold}, "+ f"S = {Forget_rate}, "
-        + f"Epocs = {epochs}" + f"Started = {timer()}"+"\n")
+f.write(
+	f"\nPredict: {type_predict}, " + f"Number_of_clauses = {clauses}, " + f"T = {Threshold}, " + f"S = {Forget_rate}, "
+	+ f"Epocs = {epochs}" + f"Started = {timer()}" + "\n")
 f.close()
-
 
 results = np.zeros(0)
 print("Training...")
@@ -104,9 +110,9 @@ for i in range(100):
 	ctm.fit(X_train, Y_train, epochs=epochs)
 	stop = time()
 
-	results = np.append(results, 100*(ctm.predict(X_test) == Y_test).mean())
+	results = np.append(results, 100 * (ctm.predict(X_test) == Y_test).mean())
 	print("#%d Mean Accuracy (%%): %.2f; Std.dev.: %.2f; Training Time: %.1f ms/epoch; Timestamp: %s" % (
-		i+1, np.mean(results), np.std(results), (stop-start)/epochs, timer()))
+		i + 1, np.mean(results), np.std(results), (stop - start) / epochs, timer()))
 
 	f = open("log.txt", "a")
 	f.write("#%d Mean Accuracy (%%): %.2f; Std.dev.: %.2f; Training Time: %.1f ms/epoch; Timestamp: %s" % (
