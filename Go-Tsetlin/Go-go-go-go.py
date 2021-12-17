@@ -40,7 +40,7 @@ sgf_dir = 'go9'
 
 
 while True:
-	moves_to_predict = int(input("How many moves to predict? (B=odd, W=even):"))
+	moves_to_predict = int(input("How many moves used to predict? (B=odd numbers, W=even numbers| 0 will use ALL recursively):"))
 	if 5 > moves_to_predict > 2 or moves_to_predict == 0:
 		break
 
@@ -50,11 +50,11 @@ while True:
 		break
 
 while True:
-	inn = input("Load data from folder = T, from datafile = F: ")
-	if inn == "T":
+	inn = input("Load data from folder = F, from datafile = D: ")
+	if inn == "F":
 		newData = True
 		break
-	elif inn == "F":
+	elif inn == "D":
 		newData = False
 		break
 ''' -------------------------------------------------------------- '''
@@ -83,9 +83,9 @@ Y_temp = load_data("Y_temp_" + type_predict + "_" + sgf_dir + "_" + str(game_siz
 X_train, X_test, Y_train, Y_test = train_test_split(X_temp, Y_temp, test_size=0.2, random_state=42, shuffle=True)
 
 ''' ------------- SETTINGS ------------- '''
-clauses = 1000
-Threshold = 100
-Forget_rate = 5
+clauses = 200
+Threshold = 300
+Forget_rate = 10
 epochs = 250
 ''' ------------------------------------ '''
 if cuda == "T":
@@ -95,26 +95,32 @@ elif cuda == "F":
 
 print(
 	f"\nPredict: {type_predict}, " + f"Number_of_clauses = {clauses}, " + f"T = {Threshold}, " + f"S = {Forget_rate}, "
-	+ f"Epocs = {epochs}" + f"Started = {timer()}" + "\n")
+	+ f"Epocs = {epochs}, " + f"Started = {timer()}" + "\n")
 
 f = open("log.txt", "a")
 f.write(
 	f"\nPredict: {type_predict}, " + f"Number_of_clauses = {clauses}, " + f"T = {Threshold}, " + f"S = {Forget_rate}, "
-	+ f"Epocs = {epochs}" + f"Started = {timer()}" + "\n")
+	+ f"Epocs = {epochs}, " + f"Started = {timer()}" + "\n")
 f.close()
 
-results = np.zeros(0)
-print("Training...")
-for i in range(100):
-	start = time()
-	ctm.fit(X_train, Y_train, epochs=epochs)
-	stop = time()
 
-	results = np.append(results, 100 * (ctm.predict(X_test) == Y_test).mean())
-	print("#%d Mean Accuracy (%%): %.2f; Std.dev.: %.2f; Training Time: %.1f ms/epoch; Timestamp: %s" % (
-		i + 1, np.mean(results), np.std(results), (stop - start) / epochs, timer()))
+def train(epochs):
+	results = np.zeros(0)
+	print("Training...")
+	for i in range(epochs):
+		start = time()
+		ctm.fit(X_train, Y_train, epochs=epochs)
+		stop = time()
 
-	f = open("log.txt", "a")
-	f.write("#%d Mean Accuracy (%%): %.2f; Std.dev.: %.2f; Training Time: %.1f ms/epoch; Timestamp: %s" % (
-		i + 1, np.mean(results), np.std(results), (stop - start), timer()) + "\n")
-	f.close()
+		results = np.append(results, 100 * (ctm.predict(X_test) == Y_test).mean())
+		print("#%d Mean Accuracy (%%): %.2f; Std.dev.: %.2f; Training Time: %.1f ms/epoch; Timestamp: %s" % (
+			i + 1, np.mean(results), np.std(results), (stop - start) / epochs, timer()))
+
+		f = open("log.txt", "a")
+		f.write("#%d Mean Accuracy (%%): %.2f; Std.dev.: %.2f; Training Time: %.1f ms/epoch; Timestamp: %s" % (
+			i + 1, np.mean(results), np.std(results), (stop - start), timer()) + "\n")
+		f.close()
+
+
+train(epochs=100)
+

@@ -103,7 +103,7 @@ def recursive(x_temp, go_flatten_board, go_flatten_board_small, game_size, x_res
     if y_result is None:  # create a new result if no intermediate was given
         x_result, y_result = [], []
 
-    if len(x_temp) != 2:    # stop the recursion if there are no more moves
+    if len(x_temp) != 2:    # stop the recursion if there are no more moves ------ THIS IS ONLY FOR BLACK STONES ------
         for move in x_temp[:-1]:
             if move[0] == 'B':  # check if the position for black stone
                 first, second = 1, 0
@@ -153,6 +153,7 @@ def create_TM_representations(dataset_dir, game_size, function_input, moves_to_p
 
                 # we get the move information in terms of row id and column id, we then convert those to bits representations using a helper function
                 if function_input == "win" and label2 == "black":
+                    ''' THIS PART IS USED WHEN PREDICTING WINS'''
                     stone_bits_representation = convert_game_to_bits(sample[3], game_size)
                     X.append(stone_bits_representation)
                     Y.append(label)
@@ -166,6 +167,7 @@ def create_TM_representations(dataset_dir, game_size, function_input, moves_to_p
 
                     if len(x_temp) > 2:
                         if moves_to_predict == 0:
+                            ''' THIS PART IS USED WHEN PREDICTING BEST NEXT MOVE USING ALL MOVES RECURSIVELY '''
                             stone_bits_representation, label = convert_game_to_bits_2(x_temp, game_size, function_input,
                                                                                       moves_to_predict)
                             for i, each in enumerate(stone_bits_representation):
@@ -174,6 +176,7 @@ def create_TM_representations(dataset_dir, game_size, function_input, moves_to_p
                         else:
                             if label2 == function_input:
                                 if moves_to_predict < len(x_temp) != 2:
+                                    ''' THIS PART IS USED WHEN PREDICTING BEST NEXT - <VARIABLE> - MOVE '''
                                     stone_bits_representation, label = convert_game_to_bits_2(x_temp, game_size, function_input, moves_to_predict)
                                     X.append(stone_bits_representation)
                                     Y.append(label)

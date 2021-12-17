@@ -7,6 +7,7 @@ from datetime import datetime
 from sklearn.model_selection import train_test_split
 
 from PyTsetlinMachineCUDA.tm import MultiClassConvolutionalTsetlinMachine2D
+from pyTsetlinMachine.tm import MultiClassConvolutionalTsetlinMachine2D as npa
 from process_go_ds import create_TM_representations
 
 

@@ -1,0 +1,304 @@
+Number_of_clauses = 40, T = 60, S = 4
+#1 Mean Accuracy (%): 6.35; Std.dev.: 0.00; Training Time: 117.9 ms/epoch
+#2 Mean Accuracy (%): 6.60; Std.dev.: 0.25; Training Time: 119.1 ms/epoch
+#3 Mean Accuracy (%): 6.54; Std.dev.: 0.22; Training Time: 113.0 ms/epoch
+#4 Mean Accuracy (%): 6.56; Std.dev.: 0.20; Training Time: 121.5 ms/epoch
+
+Number_of_clauses = 100, T = 100, S = 20
+#1 Mean Accuracy (%): 3.16; Std.dev.: 0.00; Training Time: 1.3 ms/epoch
+#2 Mean Accuracy (%): 3.11; Std.dev.: 0.05; Training Time: 1.3 ms/epoch
+#3 Mean Accuracy (%): 2.99; Std.dev.: 0.18; Training Time: 1.3 ms/epoch
+#4 Mean Accuracy (%): 3.11; Std.dev.: 0.27; Training Time: 1.3 ms/epoch
+#5 Mean Accuracy (%): 3.20; Std.dev.: 0.30; Training Time: 1.3 ms/epoch
+#6 Mean Accuracy (%): 3.10; Std.dev.: 0.36; Training Time: 1.4 ms/epoch
+#7 Mean Accuracy (%): 3.09; Std.dev.: 0.33; Training Time: 1.3 ms/epoch
+#8 Mean Accuracy (%): 3.06; Std.dev.: 0.32; Training Time: 2.3 ms/epoch
+#9 Mean Accuracy (%): 3.10; Std.dev.: 0.32; Training Time: 1.4 ms/epoch
+#10 Mean Accuracy (%): 3.16; Std.dev.: 0.36; Training Time: 1.3 ms/epoch
+
+Number_of_clauses = 100, T = 100, S = 20
+#1 Mean Accuracy (%): 4.25; Std.dev.: 0.00; Training Time: 2.4 ms/epoch
+#2 Mean Accuracy (%): 3.97; Std.dev.: 0.29; Training Time: 2.5 ms/epoch
+#3 Mean Accuracy (%): 4.00; Std.dev.: 0.24; Training Time: 2.4 ms/epoch
+
+Number_of_clauses = 100, T = 100, S = 20
+#1 Mean Accuracy (%): 5.00; Std.dev.: 0.00; Training Time: 5.5 ms/epoch
+#2 Mean Accuracy (%): 4.97; Std.dev.: 0.03; Training Time: 4.8 ms/epoch
+#3 Mean Accuracy (%): 4.84; Std.dev.: 0.18; Training Time: 4.8 ms/epoch
+#4 Mean Accuracy (%): 4.74; Std.dev.: 0.24; Training Time: 5.0 ms/epoch
+#5 Mean Accuracy (%): 4.77; Std.dev.: 0.22; Training Time: 5.3 ms/epoch
+#6 Mean Accuracy (%): 4.78; Std.dev.: 0.20; Training Time: 5.1 ms/epoch
+#7 Mean Accuracy (%): 4.77; Std.dev.: 0.19; Training Time: 5.1 ms/epoch
+#8 Mean Accuracy (%): 4.84; Std.dev.: 0.25; Training Time: 5.2 ms/epoch
+#9 Mean Accuracy (%): 4.87; Std.dev.: 0.25; Training Time: 5.8 ms/epoch
+
+Number_of_clauses = 100, T = 100, S = 20
+#1 Mean Accuracy (%): 5.98; Std.dev.: 0.00; Training Time: 13.4 ms/epoch
+#2 Mean Accuracy (%): 6.05; Std.dev.: 0.07; Training Time: 15.7 ms/epoch
+#3 Mean Accuracy (%): 5.93; Std.dev.: 0.18; Training Time: 14.0 ms/epoch
+#4 Mean Accuracy (%): 6.08; Std.dev.: 0.31; Training Time: 13.2 ms/epoch
+#5 Mean Accuracy (%): 6.14; Std.dev.: 0.30; Training Time: 12.4 ms/epoch
+#6 Mean Accuracy (%): 6.18; Std.dev.: 0.29; Training Time: 11.1 ms/epoch
+#7 Mean Accuracy (%): 6.12; Std.dev.: 0.31; Training Time: 11.1 ms/epoch
+#8 Mean Accuracy (%): 6.08; Std.dev.: 0.31; Training Time: 13.1 ms/epoch
+#9 Mean Accuracy (%): 6.04; Std.dev.: 0.32; Training Time: 11.3 ms/epoch
+#10 Mean Accuracy (%): 6.01; Std.dev.: 0.31; Training Time: 11.1 ms/epoch
+#11 Mean Accuracy (%): 6.01; Std.dev.: 0.29; Training Time: 11.2 ms/epoch
+#12 Mean Accuracy (%): 5.99; Std.dev.: 0.29; Training Time: 11.1 ms/epoch
+#13 Mean Accuracy (%): 6.03; Std.dev.: 0.32; Training Time: 11.2 ms/epoch
+#14 Mean Accuracy (%): 6.00; Std.dev.: 0.32; Training Time: 11.2 ms/epoch
+#15 Mean Accuracy (%): 6.00; Std.dev.: 0.31; Training Time: 11.2 ms/epoch
+#16 Mean Accuracy (%): 6.00; Std.dev.: 0.30; Training Time: 11.1 ms/epoch
+#17 Mean Accuracy (%): 6.02; Std.dev.: 0.30; Training Time: 11.3 ms/epoch
+#18 Mean Accuracy (%): 6.04; Std.dev.: 0.30; Training Time: 11.2 ms/epoch
+#19 Mean Accuracy (%): 6.05; Std.dev.: 0.29; Training Time: 11.3 ms/epoch
+#20 Mean Accuracy (%): 6.06; Std.dev.: 0.29; Training Time: 11.1 ms/epoch
+#21 Mean Accuracy (%): 6.05; Std.dev.: 0.29; Training Time: 11.1 ms/epoch
+#22 Mean Accuracy (%): 6.05; Std.dev.: 0.28; Training Time: 11.2 ms/epoch
+#23 Mean Accuracy (%): 6.06; Std.dev.: 0.28; Training Time: 11.1 ms/epoch
+#24 Mean Accuracy (%): 6.08; Std.dev.: 0.28; Training Time: 11.2 ms/epoch
+#25 Mean Accuracy (%): 6.06; Std.dev.: 0.28; Training Time: 11.2 ms/epoch
+#26 Mean Accuracy (%): 6.06; Std.dev.: 0.28; Training Time: 11.2 ms/epoch
+#27 Mean Accuracy (%): 6.06; Std.dev.: 0.27; Training Time: 11.2 ms/epoch
+#28 Mean Accuracy (%): 6.08; Std.dev.: 0.29; Training Time: 11.2 ms/epoch
+#29 Mean Accuracy (%): 6.08; Std.dev.: 0.28; Training Time: 11.2 ms/epoch
+#30 Mean Accuracy (%): 6.10; Std.dev.: 0.29; Training Time: 11.2 ms/epoch
+#31 Mean Accuracy (%): 6.10; Std.dev.: 0.29; Training Time: 11.3 ms/epoch
+#32 Mean Accuracy (%): 6.08; Std.dev.: 0.29; Training Time: 11.2 ms/epoch
+#33 Mean Accuracy (%): 6.09; Std.dev.: 0.29; Training Time: 11.2 ms/epoch
+#34 Mean Accuracy (%): 6.09; Std.dev.: 0.29; Training Time: 11.1 ms/epoch
+#35 Mean Accuracy (%): 6.08; Std.dev.: 0.29; Training Time: 11.2 ms/epoch
+#36 Mean Accuracy (%): 6.08; Std.dev.: 0.28; Training Time: 11.2 ms/epoch
+
+Number_of_clauses = 100, T = 100, S = 100
+#1 Mean Accuracy (%): 4.85; Std.dev.: 0.00; Training Time: 41.1 ms/epoch
+#2 Mean Accuracy (%): 5.04; Std.dev.: 0.19; Training Time: 38.0 ms/epoch
+#3 Mean Accuracy (%): 4.98; Std.dev.: 0.18; Training Time: 38.9 ms/epoch
+
+Number_of_clauses = 300, T = 100, S = 100
+#1 Mean Accuracy (%): 6.51; Std.dev.: 0.00; Training Time: 140.8 ms/epoch
+#2 Mean Accuracy (%): 6.51; Std.dev.: 0.00; Training Time: 134.0 ms/epoch
+#3 Mean Accuracy (%): 6.42; Std.dev.: 0.13; Training Time: 128.7 ms/epoch
+#4 Mean Accuracy (%): 6.41; Std.dev.: 0.11; Training Time: 139.0 ms/epoch
+#5 Mean Accuracy (%): 6.41; Std.dev.: 0.10; Training Time: 139.5 ms/epoch
+#6 Mean Accuracy (%): 6.38; Std.dev.: 0.11; Training Time: 131.4 ms/epoch
+#7 Mean Accuracy (%): 6.41; Std.dev.: 0.14; Training Time: 132.4 ms/epoch
+#8 Mean Accuracy (%): 6.40; Std.dev.: 0.14; Training Time: 152.0 ms/epoch
+#9 Mean Accuracy (%): 6.44; Std.dev.: 0.17; Training Time: 149.9 ms/epoch
+#10 Mean Accuracy (%): 6.47; Std.dev.: 0.19; Training Time: 140.3 ms/epoch
+#11 Mean Accuracy (%): 6.45; Std.dev.: 0.19; Training Time: 135.0 ms/epoch
+#12 Mean Accuracy (%): 6.44; Std.dev.: 0.19; Training Time: 137.2 ms/epoch
+#13 Mean Accuracy (%): 6.46; Std.dev.: 0.20; Training Time: 148.4 ms/epoch
+#14 Mean Accuracy (%): 6.47; Std.dev.: 0.19; Training Time: 145.8 ms/epoch
+#15 Mean Accuracy (%): 6.46; Std.dev.: 0.19; Training Time: 140.3 ms/epoch
+#16 Mean Accuracy (%): 6.47; Std.dev.: 0.19; Training Time: 145.0 ms/epoch
+#17 Mean Accuracy (%): 6.47; Std.dev.: 0.19; Training Time: 144.7 ms/epoch
+#18 Mean Accuracy (%): 6.47; Std.dev.: 0.18; Training Time: 141.9 ms/epoch
+#19 Mean Accuracy (%): 6.46; Std.dev.: 0.19; Training Time: 143.2 ms/epoch
+#20 Mean Accuracy (%): 6.44; Std.dev.: 0.20; Training Time: 149.3 ms/epoch
+#21 Mean Accuracy (%): 6.44; Std.dev.: 0.19; Training Time: 175.8 ms/epoch
+
+Number_of_clauses = 500, T = 200, S = 100
+#1 Mean Accuracy (%): 6.67; Std.dev.: 0.00; Training Time: 251.4 ms/epoch
+#2 Mean Accuracy (%): 6.74; Std.dev.: 0.07; Training Time: 251.5 ms/epoch
+#3 Mean Accuracy (%): 6.84; Std.dev.: 0.14; Training Time: 263.4 ms/epoch
+#4 Mean Accuracy (%): 6.84; Std.dev.: 0.13; Training Time: 239.6 ms/epoch
+#5 Mean Accuracy (%): 6.80; Std.dev.: 0.14; Training Time: 231.8 ms/epoch
+#6 Mean Accuracy (%): 6.90; Std.dev.: 0.24; Training Time: 241.7 ms/epoch
+#7 Mean Accuracy (%): 6.92; Std.dev.: 0.23; Training Time: 243.2 ms/epoch
+#8 Mean Accuracy (%): 6.87; Std.dev.: 0.25; Training Time: 228.8 ms/epoch
+#9 Mean Accuracy (%): 6.89; Std.dev.: 0.24; Training Time: 227.0 ms/epoch
+
+Number_of_clauses = 800, T = 200, S = 100
+#1 Mean Accuracy (%): 7.25; Std.dev.: 0.00; Training Time: 339.4 ms/epoch
+#2 Mean Accuracy (%): 7.48; Std.dev.: 0.23; Training Time: 337.5 ms/epoch
+#3 Mean Accuracy (%): 7.36; Std.dev.: 0.26; Training Time: 348.5 ms/epoch
+#4 Mean Accuracy (%): 7.44; Std.dev.: 0.27; Training Time: 339.2 ms/epoch
+#5 Mean Accuracy (%): 7.46; Std.dev.: 0.24; Training Time: 339.4 ms/epoch
+#6 Mean Accuracy (%): 7.48; Std.dev.: 0.23; Training Time: 352.1 ms/epoch
+
+Number_of_clauses = 800, T = 200, S = 100
+#1 Mean Accuracy (%): 4.82; Std.dev.: 0.00; Training Time: 336.3 ms/epoch
+#2 Mean Accuracy (%): 4.85; Std.dev.: 0.03; Training Time: 339.0 ms/epoch
+#3 Mean Accuracy (%): 4.80; Std.dev.: 0.07; Training Time: 388.3 ms/epoch
+
+Number_of_clauses = 800, T = 200, S = 100
+#1 Mean Accuracy (%): 5.28; Std.dev.: 0.00; Training Time: 392.8 ms/epoch
+#2 Mean Accuracy (%): 5.39; Std.dev.: 0.11; Training Time: 379.5 ms/epoch
+#3 Mean Accuracy (%): 5.46; Std.dev.: 0.13; Training Time: 391.0 ms/epoch
+#4 Mean Accuracy (%): 5.42; Std.dev.: 0.13; Training Time: 380.3 ms/epoch
+
+Number_of_clauses = 200, T = 200, S = 100
+Type of predicting: black, 
+Number_of_clauses = 200, T = 200, S = 50
+Type of predicting: black, 
+Number_of_clauses = 200, T = 200, S = 50
+
+Predict: black, Number_of_clauses = 200, T = 200, S = 50Epocs = 100
+#1 Mean Accuracy (%): 7.66; Std.dev.: 0.00; Training Time: 6131.1 ms/epoch
+#2 Mean Accuracy (%): 7.67; Std.dev.: 0.01; Training Time: 6145.1 ms/epoch
+#3 Mean Accuracy (%): 7.67; Std.dev.: 0.01; Training Time: 6115.4 ms/epoch
+#4 Mean Accuracy (%): 7.70; Std.dev.: 0.06; Training Time: 5963.3 ms/epoch
+
+Predict: black, Number_of_clauses = 1, T = 2, S = 1
+Predict: black, Number_of_clauses = 1, T = 2, S = 1
+Predict: black, Number_of_clauses = 1, T = 2, S = 1
+Predict: black, Number_of_clauses = 1, T = 2, S = 1
+Predict: black, Number_of_clauses = 1, T = 2, S = 1
+
+Predict: black, Number_of_clauses = 1, T = 2, S = 1, Started = 21:39:12, 21-11
+#1 Mean Accuracy (%): 9.73; Std.dev.: 0.00; Training Time: 0.6 ms/epoch; Timestamp: 21:39:13, 21-11
+#2 Mean Accuracy (%): 8.53; Std.dev.: 1.20; Training Time: 0.7 ms/epoch; Timestamp: 21:39:14, 21-11
+#3 Mean Accuracy (%): 10.93; Std.dev.: 3.53; Training Time: 0.7 ms/epoch; Timestamp: 21:39:14, 21-11
+#4 Mean Accuracy (%): 10.61; Std.dev.: 3.10; Training Time: 0.7 ms/epoch; Timestamp: 21:39:15, 21-11
+#5 Mean Accuracy (%): 9.99; Std.dev.: 3.04; Training Time: 0.8 ms/epoch; Timestamp: 21:39:16, 21-11
+#6 Mean Accuracy (%): 9.83; Std.dev.: 2.80; Training Time: 0.6 ms/epoch; Timestamp: 21:39:16, 21-11
+#7 Mean Accuracy (%): 9.17; Std.dev.: 3.05; Training Time: 0.6 ms/epoch; Timestamp: 21:39:17, 21-11
+#8 Mean Accuracy (%): 9.02; Std.dev.: 2.88; Training Time: 0.6 ms/epoch; Timestamp: 21:39:18, 21-11
+#9 Mean Accuracy (%): 8.75; Std.dev.: 2.83; Training Time: 0.6 ms/epoch; Timestamp: 21:39:18, 21-11
+#10 Mean Accuracy (%): 8.68; Std.dev.: 2.69; Training Time: 0.6 ms/epoch; Timestamp: 21:39:19, 21-11
+#11 Mean Accuracy (%): 8.58; Std.dev.: 2.58; Training Time: 0.6 ms/epoch; Timestamp: 21:39:20, 21-11
+#12 Mean Accuracy (%): 8.54; Std.dev.: 2.47; Training Time: 0.6 ms/epoch; Timestamp: 21:39:20, 21-11
+#13 Mean Accuracy (%): 8.59; Std.dev.: 2.38; Training Time: 0.6 ms/epoch; Timestamp: 21:39:21, 21-11
+#14 Mean Accuracy (%): 8.95; Std.dev.: 2.63; Training Time: 0.6 ms/epoch; Timestamp: 21:39:21, 21-11
+#15 Mean Accuracy (%): 8.77; Std.dev.: 2.63; Training Time: 0.6 ms/epoch; Timestamp: 21:39:22, 21-11
+#16 Mean Accuracy (%): 8.80; Std.dev.: 2.55; Training Time: 0.6 ms/epoch; Timestamp: 21:39:23, 21-11
+#17 Mean Accuracy (%): 8.75; Std.dev.: 2.48; Training Time: 0.6 ms/epoch; Timestamp: 21:39:23, 21-11
+#18 Mean Accuracy (%): 8.58; Std.dev.: 2.52; Training Time: 0.6 ms/epoch; Timestamp: 21:39:24, 21-11
+#19 Mean Accuracy (%): 8.58; Std.dev.: 2.45; Training Time: 0.6 ms/epoch; Timestamp: 21:39:24, 21-11
+#20 Mean Accuracy (%): 8.58; Std.dev.: 2.39; Training Time: 0.7 ms/epoch; Timestamp: 21:39:25, 21-11
+#21 Mean Accuracy (%): 8.63; Std.dev.: 2.35; Training Time: 0.6 ms/epoch; Timestamp: 21:39:26, 21-11
+#22 Mean Accuracy (%): 8.89; Std.dev.: 2.59; Training Time: 0.6 ms/epoch; Timestamp: 21:39:26, 21-11
+#23 Mean Accuracy (%): 8.85; Std.dev.: 2.54; Training Time: 0.6 ms/epoch; Timestamp: 21:39:27, 21-11
+#24 Mean Accuracy (%): 8.77; Std.dev.: 2.52; Training Time: 0.6 ms/epoch; Timestamp: 21:39:27, 21-11
+#25 Mean Accuracy (%): 8.69; Std.dev.: 2.50; Training Time: 0.6 ms/epoch; Timestamp: 21:39:28, 21-11
+#26 Mean Accuracy (%): 8.93; Std.dev.: 2.72; Training Time: 0.6 ms/epoch; Timestamp: 21:39:29, 21-11
+#27 Mean Accuracy (%): 8.79; Std.dev.: 2.76; Training Time: 0.6 ms/epoch; Timestamp: 21:39:29, 21-11
+#28 Mean Accuracy (%): 8.85; Std.dev.: 2.73; Training Time: 0.7 ms/epoch; Timestamp: 21:39:30, 21-11
+#29 Mean Accuracy (%): 8.88; Std.dev.: 2.69; Training Time: 0.6 ms/epoch; Timestamp: 21:39:31, 21-11
+#30 Mean Accuracy (%): 8.87; Std.dev.: 2.64; Training Time: 0.7 ms/epoch; Timestamp: 21:39:31, 21-11
+#31 Mean Accuracy (%): 8.87; Std.dev.: 2.60; Training Time: 0.7 ms/epoch; Timestamp: 21:39:32, 21-11
+#32 Mean Accuracy (%): 8.89; Std.dev.: 2.56; Training Time: 0.7 ms/epoch; Timestamp: 21:39:33, 21-11
+#33 Mean Accuracy (%): 8.86; Std.dev.: 2.53; Training Time: 0.7 ms/epoch; Timestamp: 21:39:34, 21-11
+#34 Mean Accuracy (%): 8.87; Std.dev.: 2.49; Training Time: 0.7 ms/epoch; Timestamp: 21:39:34, 21-11
+#35 Mean Accuracy (%): 8.81; Std.dev.: 2.48; Training Time: 0.6 ms/epoch; Timestamp: 21:39:35, 21-11
+#36 Mean Accuracy (%): 9.00; Std.dev.: 2.69; Training Time: 0.6 ms/epoch; Timestamp: 21:39:35, 21-11
+#37 Mean Accuracy (%): 8.94; Std.dev.: 2.68; Training Time: 0.6 ms/epoch; Timestamp: 21:39:36, 21-11
+#38 Mean Accuracy (%): 8.96; Std.dev.: 2.65; Training Time: 0.6 ms/epoch; Timestamp: 21:39:37, 21-11
+#39 Mean Accuracy (%): 8.95; Std.dev.: 2.61; Training Time: 0.6 ms/epoch; Timestamp: 21:39:37, 21-11
+#40 Mean Accuracy (%): 8.86; Std.dev.: 2.65; Training Time: 0.6 ms/epoch; Timestamp: 21:39:38, 21-11
+#41 Mean Accuracy (%): 8.77; Std.dev.: 2.68; Training Time: 0.8 ms/epoch; Timestamp: 21:39:39, 21-11
+#42 Mean Accuracy (%): 8.76; Std.dev.: 2.64; Training Time: 0.7 ms/epoch; Timestamp: 21:39:39, 21-11
+#43 Mean Accuracy (%): 8.68; Std.dev.: 2.66; Training Time: 0.7 ms/epoch; Timestamp: 21:39:40, 21-11
+#44 Mean Accuracy (%): 8.66; Std.dev.: 2.63; Training Time: 0.7 ms/epoch; Timestamp: 21:39:41, 21-11
+#45 Mean Accuracy (%): 8.68; Std.dev.: 2.60; Training Time: 0.7 ms/epoch; Timestamp: 21:39:42, 21-11
+#46 Mean Accuracy (%): 8.65; Std.dev.: 2.59; Training Time: 0.8 ms/epoch; Timestamp: 21:39:42, 21-11
+#47 Mean Accuracy (%): 8.64; Std.dev.: 2.56; Training Time: 0.7 ms/epoch; Timestamp: 21:39:43, 21-11
+#48 Mean Accuracy (%): 8.67; Std.dev.: 2.54; Training Time: 0.8 ms/epoch; Timestamp: 21:39:44, 21-11
+#49 Mean Accuracy (%): 8.68; Std.dev.: 2.51; Training Time: 0.7 ms/epoch; Timestamp: 21:39:45, 21-11
+#50 Mean Accuracy (%): 8.69; Std.dev.: 2.49; Training Time: 0.8 ms/epoch; Timestamp: 21:39:46, 21-11
+#51 Mean Accuracy (%): 8.82; Std.dev.: 2.63; Training Time: 0.7 ms/epoch; Timestamp: 21:39:46, 21-11
+#52 Mean Accuracy (%): 8.79; Std.dev.: 2.62; Training Time: 0.7 ms/epoch; Timestamp: 21:39:47, 21-11
+#53 Mean Accuracy (%): 8.75; Std.dev.: 2.61; Training Time: 0.8 ms/epoch; Timestamp: 21:39:48, 21-11
+#54 Mean Accuracy (%): 8.74; Std.dev.: 2.58; Training Time: 0.7 ms/epoch; Timestamp: 21:39:48, 21-11
+#55 Mean Accuracy (%): 8.71; Std.dev.: 2.57; Training Time: 0.7 ms/epoch; Timestamp: 21:39:49, 21-11
+#56 Mean Accuracy (%): 8.73; Std.dev.: 2.55; Training Time: 0.7 ms/epoch; Timestamp: 21:39:50, 21-11
+#57 Mean Accuracy (%): 8.73; Std.dev.: 2.53; Training Time: 0.7 ms/epoch; Timestamp: 21:39:51, 21-11
+#58 Mean Accuracy (%): 8.74; Std.dev.: 2.51; Training Time: 0.7 ms/epoch; Timestamp: 21:39:51, 21-11
+#59 Mean Accuracy (%): 8.70; Std.dev.: 2.51; Training Time: 0.7 ms/epoch; Timestamp: 21:39:52, 21-11
+#60 Mean Accuracy (%): 8.65; Std.dev.: 2.51; Training Time: 0.8 ms/epoch; Timestamp: 21:39:53, 21-11
+#61 Mean Accuracy (%): 8.62; Std.dev.: 2.50; Training Time: 0.7 ms/epoch; Timestamp: 21:39:54, 21-11
+#62 Mean Accuracy (%): 8.59; Std.dev.: 2.49; Training Time: 0.8 ms/epoch; Timestamp: 21:39:54, 21-11
+#63 Mean Accuracy (%): 8.56; Std.dev.: 2.48; Training Time: 0.7 ms/epoch; Timestamp: 21:39:55, 21-11
+#64 Mean Accuracy (%): 8.54; Std.dev.: 2.47; Training Time: 0.7 ms/epoch; Timestamp: 21:39:56, 21-11
+#65 Mean Accuracy (%): 8.54; Std.dev.: 2.45; Training Time: 0.8 ms/epoch; Timestamp: 21:39:57, 21-11
+#66 Mean Accuracy (%): 8.50; Std.dev.: 2.45; Training Time: 0.7 ms/epoch; Timestamp: 21:39:57, 21-11
+#67 Mean Accuracy (%): 8.46; Std.dev.: 2.45; Training Time: 0.7 ms/epoch; Timestamp: 21:39:58, 21-11
+#68 Mean Accuracy (%): 8.46; Std.dev.: 2.43; Training Time: 0.8 ms/epoch; Timestamp: 21:39:59, 21-11
+#69 Mean Accuracy (%): 8.42; Std.dev.: 2.44; Training Time: 0.7 ms/epoch; Timestamp: 21:40:00, 21-11
+#70 Mean Accuracy (%): 8.43; Std.dev.: 2.43; Training Time: 0.8 ms/epoch; Timestamp: 21:40:01, 21-11
+#71 Mean Accuracy (%): 8.39; Std.dev.: 2.43; Training Time: 0.8 ms/epoch; Timestamp: 21:40:01, 21-11
+#72 Mean Accuracy (%): 8.51; Std.dev.: 2.61; Training Time: 0.8 ms/epoch; Timestamp: 21:40:02, 21-11
+#73 Mean Accuracy (%): 8.49; Std.dev.: 2.59; Training Time: 0.7 ms/epoch; Timestamp: 21:40:03, 21-11
+
+Predict: black, Number_of_clauses = 100, T = 100, S = 20, Started = 21:40:32, 21-11
+#1 Mean Accuracy (%): 34.76; Std.dev.: 0.00; Training Time: 40.2 ms/epoch; Timestamp: 21:41:13, 21-11
+#2 Mean Accuracy (%): 35.02; Std.dev.: 0.26; Training Time: 38.1 ms/epoch; Timestamp: 21:41:52, 21-11
+#3 Mean Accuracy (%): 33.20; Std.dev.: 2.58; Training Time: 43.4 ms/epoch; Timestamp: 21:42:35, 21-11
+#4 Mean Accuracy (%): 33.58; Std.dev.: 2.33; Training Time: 43.1 ms/epoch; Timestamp: 21:43:19, 21-11
+#5 Mean Accuracy (%): 33.53; Std.dev.: 2.08; Training Time: 45.0 ms/epoch; Timestamp: 21:44:05, 21-11
+#6 Mean Accuracy (%): 32.52; Std.dev.: 2.95; Training Time: 41.4 ms/epoch; Timestamp: 21:44:47, 21-11
+
+Predict: black, Number_of_clauses = 100, T = 100, S = 5, Epochs=100, Started = 21:45:49, 21-11
+#1 Mean Accuracy (%): 28.90; Std.dev.: 0.00; Training Time: 84.1 ms/epoch; Timestamp: 21:47:14, 21-11
+#2 Mean Accuracy (%): 32.23; Std.dev.: 3.33; Training Time: 70.7 ms/epoch; Timestamp: 21:48:26, 21-11
+#3 Mean Accuracy (%): 30.94; Std.dev.: 3.28; Training Time: 74.9 ms/epoch; Timestamp: 21:49:41, 21-11
+#4 Mean Accuracy (%): 30.71; Std.dev.: 2.87; Training Time: 74.1 ms/epoch; Timestamp: 21:50:56, 21-11
+#5 Mean Accuracy (%): 31.31; Std.dev.: 2.83; Training Time: 83.2 ms/epoch; Timestamp: 21:52:20, 21-11
+#6 Mean Accuracy (%): 31.85; Std.dev.: 2.86; Training Time: 77.5 ms/epoch; Timestamp: 21:53:39, 21-11
+#7 Mean Accuracy (%): 32.12; Std.dev.: 2.72; Training Time: 86.5 ms/epoch; Timestamp: 21:55:06, 21-11
+#8 Mean Accuracy (%): 32.30; Std.dev.: 2.59; Training Time: 82.0 ms/epoch; Timestamp: 21:56:29, 21-11
+#9 Mean Accuracy (%): 31.97; Std.dev.: 2.62; Training Time: 78.2 ms/epoch; Timestamp: 21:57:47, 21-11
+#10 Mean Accuracy (%): 32.22; Std.dev.: 2.59; Training Time: 69.7 ms/epoch; Timestamp: 21:58:58, 21-11
+#11 Mean Accuracy (%): 32.04; Std.dev.: 2.54; Training Time: 71.5 ms/epoch; Timestamp: 22:00:10, 21-11
+#12 Mean Accuracy (%): 32.29; Std.dev.: 2.57; Training Time: 63.9 ms/epoch; Timestamp: 22:01:14, 21-11
+#13 Mean Accuracy (%): 32.10; Std.dev.: 2.55; Training Time: 64.2 ms/epoch; Timestamp: 22:02:19, 21-11
+#14 Mean Accuracy (%): 31.93; Std.dev.: 2.54; Training Time: 63.9 ms/epoch; Timestamp: 22:03:23, 21-11
+#15 Mean Accuracy (%): 31.76; Std.dev.: 2.53; Training Time: 63.9 ms/epoch; Timestamp: 22:04:27, 21-11
+#16 Mean Accuracy (%): 31.66; Std.dev.: 2.48; Training Time: 63.7 ms/epoch; Timestamp: 22:05:32, 21-11
+#17 Mean Accuracy (%): 31.47; Std.dev.: 2.52; Training Time: 63.8 ms/epoch; Timestamp: 22:06:36, 21-11
+#18 Mean Accuracy (%): 31.65; Std.dev.: 2.55; Training Time: 63.6 ms/epoch; Timestamp: 22:07:40, 21-11
+#19 Mean Accuracy (%): 31.70; Std.dev.: 2.49; Training Time: 63.8 ms/epoch; Timestamp: 22:08:44, 21-11
+
+Predict: black, Number_of_clauses = 200, T = 100, S = 5, Epochs=200, Started = 22:10:14, 21-11
+#1 Mean Accuracy (%): 37.01; Std.dev.: 0.00; Training Time: 118.8 ms/epoch; Timestamp: 22:12:14, 21-11
+
+Predict: black, Number_of_clauses = 1000, T = 100, S = 5, Epochs=1000, Started = 22:12:45, 21-11
+#1 Mean Accuracy (%): 37.36; Std.dev.: 0.00; Training Time: 371.3 ms/epoch; Timestamp: 22:19:05, 21-11
+#2 Mean Accuracy (%): 37.31; Std.dev.: 0.05; Training Time: 348.7 ms/epoch; Timestamp: 22:25:02, 21-11
+#3 Mean Accuracy (%): 37.52; Std.dev.: 0.29; Training Time: 345.8 ms/epoch; Timestamp: 22:30:57, 21-11
+#4 Mean Accuracy (%): 37.39; Std.dev.: 0.34; Training Time: 369.3 ms/epoch; Timestamp: 22:37:16, 21-11
+#5 Mean Accuracy (%): 37.40; Std.dev.: 0.30; Training Time: 377.4 ms/epoch; Timestamp: 22:43:42, 21-11
+#6 Mean Accuracy (%): 37.52; Std.dev.: 0.38; Training Time: 336.6 ms/epoch; Timestamp: 22:49:27, 21-11
+#7 Mean Accuracy (%): 37.43; Std.dev.: 0.41; Training Time: 338.2 ms/epoch; Timestamp: 22:55:14, 21-11
+#8 Mean Accuracy (%): 37.43; Std.dev.: 0.39; Training Time: 338.0 ms/epoch; Timestamp: 23:01:00, 21-11
+#9 Mean Accuracy (%): 37.41; Std.dev.: 0.36; Training Time: 337.2 ms/epoch; Timestamp: 23:06:46, 21-11
+#10 Mean Accuracy (%): 37.38; Std.dev.: 0.36; Training Time: 337.5 ms/epoch; Timestamp: 23:12:32, 21-11
+
+Predict: white, Number_of_clauses = 1000, T = 100, S = 5, Epocs = 250Started = 00:00:02, 22-11
+#1 Mean Accuracy (%): 45.28; Std.dev.: 0.00; Training Time: 451.2 ms/epoch; Timestamp: 00:07:42, 22-11
+#2 Mean Accuracy (%): 44.18; Std.dev.: 1.09; Training Time: 453.8 ms/epoch; Timestamp: 00:15:24, 22-11
+
+Predict: black, Number_of_clauses = 1000, T = 100, S = 5, Epocs = 250Started = 10:11:49, 22-11
+
+Predict: black, Number_of_clauses = 1000, T = 100, S = 5, Epocs = 250Started = 10:37:07, 22-11
+#1 Mean Accuracy (%): 46.15; Std.dev.: 0.00; Training Time: 49.7 ms/epoch; Timestamp: 10:37:58, 22-11
+#2 Mean Accuracy (%): 37.28; Std.dev.: 8.88; Training Time: 49.9 ms/epoch; Timestamp: 10:38:50, 22-11
+#3 Mean Accuracy (%): 40.53; Std.dev.: 8.58; Training Time: 59.1 ms/epoch; Timestamp: 10:39:50, 22-11
+#4 Mean Accuracy (%): 42.23; Std.dev.: 8.00; Training Time: 48.7 ms/epoch; Timestamp: 10:40:40, 22-11
+#5 Mean Accuracy (%): 43.79; Std.dev.: 7.80; Training Time: 53.4 ms/epoch; Timestamp: 10:41:34, 22-11
+#6 Mean Accuracy (%): 44.33; Std.dev.: 7.22; Training Time: 46.1 ms/epoch; Timestamp: 10:42:22, 22-11
+#7 Mean Accuracy (%): 44.80; Std.dev.: 6.79; Training Time: 46.3 ms/epoch; Timestamp: 10:43:09, 22-11
+#8 Mean Accuracy (%): 45.04; Std.dev.: 6.38; Training Time: 45.2 ms/epoch; Timestamp: 10:43:55, 22-11
+#9 Mean Accuracy (%): 44.12; Std.dev.: 6.56; Training Time: 47.2 ms/epoch; Timestamp: 10:44:44, 22-11
+
+Predict: white, Number_of_clauses = 1000, T = 100, S = 5, Epocs = 250Started = 10:45:38, 22-11
+#1 Mean Accuracy (%): 35.06; Std.dev.: 0.00; Training Time: 62.7 ms/epoch; Timestamp: 10:46:42, 22-11
+#2 Mean Accuracy (%): 34.03; Std.dev.: 1.04; Training Time: 60.7 ms/epoch; Timestamp: 10:47:44, 22-11
+#3 Mean Accuracy (%): 33.68; Std.dev.: 0.98; Training Time: 68.9 ms/epoch; Timestamp: 10:48:54, 22-11
+#4 Mean Accuracy (%): 33.38; Std.dev.: 1.00; Training Time: 57.7 ms/epoch; Timestamp: 10:49:53, 22-11
+#5 Mean Accuracy (%): 33.30; Std.dev.: 0.91; Training Time: 78.2 ms/epoch; Timestamp: 10:51:14, 22-11
+#6 Mean Accuracy (%): 33.33; Std.dev.: 0.83; Training Time: 69.2 ms/epoch; Timestamp: 10:52:25, 22-11
+#7 Mean Accuracy (%): 33.47; Std.dev.: 0.84; Training Time: 63.5 ms/epoch; Timestamp: 10:53:31, 22-11
+#8 Mean Accuracy (%): 33.31; Std.dev.: 0.89; Training Time: 73.0 ms/epoch; Timestamp: 10:54:47, 22-11
+#9 Mean Accuracy (%): 33.65; Std.dev.: 1.27; Training Time: 79.9 ms/epoch; Timestamp: 10:56:09, 22-11
+
+Predict: white, Number_of_clauses = 1000, T = 100, S = 5, Epocs = 250Started = 11:35:27, 22-11
+#1 Mean Accuracy (%): 26.61; Std.dev.: 0.00; Training Time: 411.4 ms/epoch; Timestamp: 11:42:33, 22-11
+#2 Mean Accuracy (%): 23.18; Std.dev.: 3.43; Training Time: 411.5 ms/epoch; Timestamp: 11:49:39, 22-11
+#3 Mean Accuracy (%): 24.03; Std.dev.: 3.05; Training Time: 407.7 ms/epoch; Timestamp: 11:56:43, 22-11
+#4 Mean Accuracy (%): 24.36; Std.dev.: 2.70; Training Time: 423.9 ms/epoch; Timestamp: 12:04:01, 22-11
+#5 Mean Accuracy (%): 24.29; Std.dev.: 2.42; Training Time: 419.7 ms/epoch; Timestamp: 12:11:17, 22-11
+
+Predict: black, Number_of_clauses = 1000, T = 100, S = 5, Epocs = 250Started = 12:21:44, 22-11
+#1 Mean Accuracy (%): 26.83; Std.dev.: 0.00; Training Time: 372.4 ms/epoch; Timestamp: 12:28:11, 22-11
